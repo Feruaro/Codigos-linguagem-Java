@@ -1,0 +1,38 @@
+
+
+import java.text.DecimalFormat;
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        DecimalFormat deci = new DecimalFormat("0.00");
+        
+        double nota, media;
+        int i, c;
+        
+        do{
+            i = 0;
+            media = 0;
+            
+            while(i < 2){
+               nota = ler.nextDouble();
+               if(nota >= 0 && nota <= 10){
+                   media += nota;
+                   i++;
+               } else{
+                   System.out.println("nota invalida");
+               }
+            }
+            System.out.println("media = " + deci.format(media / 2));
+            
+            do{
+                System.out.println("novo calculo (1-sim 2-nao)");
+                c = ler.nextInt();
+            }while(c < 1 || c > 2);
+            
+        }while(c == 1); 
+    } 
+}

@@ -1,0 +1,24 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        int qntd = ler.nextInt(), num;
+        String r = "";
+        
+        for(int i=0; i<qntd; i++){
+            num = ler.nextInt();
+            r = " eh primo";
+            
+            for(int x=2; x<num; x++){
+                if(num%x == 0) r = " nao eh primo";
+            }           
+            System.out.println(num + r);
+        } 
+    } 
+}

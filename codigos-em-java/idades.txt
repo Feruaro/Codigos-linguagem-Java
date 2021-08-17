@@ -1,0 +1,30 @@
+
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        DecimalFormat deci = new DecimalFormat("0.00");
+        
+        int idade, qntd = 0;
+        double media = 0;
+        
+        do{
+            idade = ler.nextInt();
+            
+            if(idade > 0){
+                media += idade;
+                qntd++;
+            }
+            
+        }while(idade > 0);
+        
+        System.out.println(deci.format(media / qntd));
+ 
+    }
+ 
+}

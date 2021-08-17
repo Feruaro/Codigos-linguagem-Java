@@ -1,0 +1,25 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        int horario = ler.nextInt(), h = 0, m = 0, s = 0;
+        
+        if(horario >= 3600){
+            h = horario / 3600;
+            horario %= 3600;
+        }
+        if(horario >= 60){
+            m = horario / 60;
+            horario %= 60;
+        } 
+        if(horario >= 1) s = horario / 1;
+        
+        System.out.println(h + ":" + m + ":" + s); 
+    } 
+}

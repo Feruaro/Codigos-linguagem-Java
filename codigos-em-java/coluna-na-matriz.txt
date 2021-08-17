@@ -1,0 +1,32 @@
+
+
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        DecimalFormat deci = new DecimalFormat("0.0");
+        
+        int n = ler.nextInt();
+        double x[][] = new double [12][12], soma = 0, media = 0;
+        String t = ler.next();
+        
+        //linha
+        for(int i=0; i<12; i++){
+            //coluna
+            for(int j=0; j<12; j++){
+                x[i][j] = ler.nextDouble();
+            }
+        }        
+        for(int a=0; a<12; a++){
+            if(t.equals("S")) soma += x[a][n];
+            else if(t.equals("M")) media += x[a][n];
+        }
+        
+        if(t.equals("S")) System.out.println(deci.format(soma));
+        else if(t.equals("M")) System.out.println(deci.format(media / 12)); 
+    } 
+}

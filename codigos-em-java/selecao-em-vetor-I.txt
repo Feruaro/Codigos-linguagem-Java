@@ -1,0 +1,18 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        double x[] = new double [100];
+        
+        for(int i=0; i<100; i++){
+            x[i] = ler.nextDouble();            
+            if(x[i] <= 10) System.out.println("A[" + i + "] = " + x[i]);
+        } 
+    } 
+}

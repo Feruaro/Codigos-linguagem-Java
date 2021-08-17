@@ -1,0 +1,17 @@
+
+
+import java.text.DecimalFormat;
+public class Main {
+ 
+    public static void main(String[] args) {
+        
+        DecimalFormat deci = new DecimalFormat("0.00");
+        
+        float s = 0;
+        
+        for(float i=1; i<=100; i++){
+            s += 1 / i;
+        }        
+        System.out.println(deci.format(s)); 
+    }
+}

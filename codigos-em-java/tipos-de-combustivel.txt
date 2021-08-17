@@ -1,0 +1,31 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        int n, qntdA = 0, qntdG = 0, qntdD = 0;
+        
+        do{
+            do{
+                n = ler.nextInt();
+            }while(n < 1 || n > 4);
+            
+            switch(n){
+                case 1 -> qntdA++;
+                case 2 -> qntdG++;
+                case 3 -> qntdD++;
+            }
+        }while(n != 4);
+        
+        System.out.println("MUITO OBRIGADO");
+        System.out.println("Alcool: " + qntdA +
+                           "\nGasolina: " + qntdG +
+                           "\nDiesel: " + qntdD);
+ 
+    }
+}

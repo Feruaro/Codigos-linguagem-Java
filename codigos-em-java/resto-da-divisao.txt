@@ -1,0 +1,28 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        int v1 = ler.nextInt(), v2 = ler.nextInt(), menor, maior;
+        
+        //como não é necessariamente em ordem crescente a entrada, org caso não seja        
+        if(v1 < v2){
+            menor = v1;
+            maior = v2;
+        } else {
+            menor = v2;
+            maior = v1;
+        }
+        
+        for(int i=menor+1; i<maior; i++){
+            if(i%5 == 2 || i%5 == 3) System.out.println(i);
+        }
+ 
+    }
+ 
+}

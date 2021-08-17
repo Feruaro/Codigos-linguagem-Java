@@ -1,0 +1,27 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+        
+        Scanner ler = new Scanner(System.in);
+        
+        int qntd = ler.nextInt(), x[] = new int[qntd], menor, pos  = 0;
+        
+        for(int i=0; i<qntd; i++){
+            x[i] = ler.nextInt();
+        }
+        
+        menor = x[0];
+        for(int i=1; i<qntd; i++){
+            if(x[i] < menor){
+                menor = x[i];
+                pos = i;
+            }
+        }        
+        System.out.println("Menor valor: " + menor +
+                           "\nPosicao: " + pos);
+    } 
+}

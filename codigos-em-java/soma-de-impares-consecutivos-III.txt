@@ -1,0 +1,30 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+        
+        Scanner ler = new Scanner(System.in);
+ 
+        int qntd = ler.nextInt(), x, y, soma, c;
+        
+        for(int i=0; i<qntd; i++){
+            x = ler.nextInt();
+            y = ler.nextInt();
+            soma = 0;
+            c = 1;
+
+            while(c <= y){
+                if(x%2 != 0){
+                    soma += x;
+                    x++;
+                    c++;
+                } 
+                if(x%2 == 0) x++;
+            }
+            System.out.println(soma);
+        }                 
+    } 
+}

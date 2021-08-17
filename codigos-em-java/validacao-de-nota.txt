@@ -1,0 +1,26 @@
+
+
+import java.text.DecimalFormat;
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        DecimalFormat deci = new DecimalFormat("0.00");
+        
+        double nota, media = 0;
+        int i = 0;
+        
+        do{
+            nota = ler.nextDouble();
+            if(nota >= 0 && nota <= 10){
+                media += nota;
+                i++;
+            } else System.out.println("nota invalida");
+        }while(i < 2);       
+        
+        System.out.println("media = " + deci.formatmedia /= 2));
+    } 
+}

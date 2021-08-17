@@ -1,0 +1,24 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        int qntd = ler.nextInt(), num, soma;
+        
+        for(int x=0; x<qntd; x++){
+            num = ler.nextInt();
+            soma = 0;
+            
+            for(int i=1; i<num; i++){
+                if(num%i == 0) soma += i;
+            }
+            if(soma == num) System.out.println(num + " eh perfeito");
+            else System.out.println(num + " nao eh perfeito");
+        } 
+    } 
+}

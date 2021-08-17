@@ -1,0 +1,21 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        int qntd = ler.nextInt(), num, qntdI = 0, qntdO = 0;
+        
+        for(int i=0; i<qntd; i++){
+            num = ler.nextInt();
+            if(num >= 10 && num <= 20) qntdI++;
+            else qntdO++;
+        }        
+        System.out.println(qntdI + " in\n" +
+                           qntdO + " out");
+    } 
+}

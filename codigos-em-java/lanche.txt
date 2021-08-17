@@ -1,0 +1,24 @@
+
+
+import java.text.DecimalFormat;
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        DecimalFormat deci = new DecimalFormat("0.00");
+        
+        int cod = ler.nextInt(), qntd = ler.nextInt();
+        float total = 0;
+        
+        switch(cod){
+            case 1 -> System.out.println("Total: R$ " + deci.format(total = 4.00f * qntd));
+            case 2 -> System.out.println("Total: R$ " + deci.format(total = 4.50f * qntd));
+            case 3 -> System.out.println("Total: R$ " + deci.format(total = 5.00f * qntd));
+            case 4 -> System.out.println("Total: R$ " + deci.format(total = 2.00f * qntd));
+            case 5 -> System.out.println("Total: R$ " + deci.format(total = 1.50f * qntd));
+        }
+    }
+}

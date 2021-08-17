@@ -1,0 +1,21 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        int qntd = ler.nextInt(), r1, r2;
+        
+        for(int i=0; i<qntd; i++){
+            r1 = ler.nextInt(); 
+            r2 = ler.nextInt();
+            System.out.println(r1 + r2);
+        }
+ 
+    }
+ 
+}

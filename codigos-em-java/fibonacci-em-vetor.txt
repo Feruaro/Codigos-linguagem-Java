@@ -1,0 +1,33 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        long f = 0, n1, n2;
+        int num, qntd = ler.nextInt();
+        
+        for(int i=0; i<qntd; i++){
+            num = ler.nextInt();
+            n1 = 0;
+            n2 = 1;
+            
+            switch(num){
+                case 0 -> f = 0;
+                case 1 -> f = 1;
+            }
+            if(num > 1){
+                for(int x=2; x<=num; x++){
+                    f = n1 + n2;
+                    n1 = n2;
+                    n2 = f;
+                }
+            }                    
+            System.out.println("Fib(" + num + ") = " + f);
+        } 
+    } 
+}

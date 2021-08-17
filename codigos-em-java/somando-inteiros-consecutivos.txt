@@ -1,0 +1,22 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        int a = ler.nextInt(), n, soma = 0;
+        
+        do{
+            n = ler.nextInt();
+        }while(n <= 0);
+        
+        for(int i=0; i<=n-1; i++){
+            soma += a + i;
+        }        
+        System.out.println(soma); 
+    } 
+}

@@ -1,0 +1,23 @@
+
+
+import java.text.DecimalFormat;
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        DecimalFormat deci = new DecimalFormat("0.000");
+        
+        //volume de uma esfera -> (4/3) * pi * R3
+        
+        double R = ler.nextDouble(), pi = 3.14159;
+        
+        double volume = (4.0/3) * pi * Math.pow(R, 3);
+        
+        System.out.println("VOLUME = " + deci.format(volume));
+ 
+    }
+ 
+}

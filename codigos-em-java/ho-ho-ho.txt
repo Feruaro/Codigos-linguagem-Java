@@ -1,0 +1,22 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        int n;
+        do{
+           n = ler.nextInt();
+        }while(n < 0 || n > Math.pow(10, 6));
+        
+        for(int i=1; i<=n; i++){
+            System.out.print("Ho");
+            if(i < n) System.out.print(" ");
+            if(i == n) System.out.println("!");
+        } 
+    } 
+}

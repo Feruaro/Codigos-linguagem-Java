@@ -1,0 +1,22 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        int x, y;
+        
+        do{
+            x = ler.nextInt();
+            y = ler.nextInt();
+            if(x != y){
+                if(x < y) System.out.println("Crescente");
+                else System.out.println("Decrescente");
+            }
+        }while(x != y);
+    } 
+}

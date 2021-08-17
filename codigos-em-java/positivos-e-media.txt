@@ -1,0 +1,34 @@
+
+
+import java.text.DecimalFormat;
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        DecimalFormat deci = new DecimalFormat("0.0");
+           
+        double valor[] = new double[6], somaPos = 0;
+        int valPositivo = 0;
+        
+        for(int i=0; i<6; i++){
+            valor[i] = ler.nextDouble();
+        }
+        
+        for(int i=0; i<6; i++){
+            if(valor[i] > 0){
+                valPositivo++;
+                somaPos += valor[i];
+            }
+        }
+        
+        double mediaPos = somaPos / valPositivo;
+        
+        System.out.println(valPositivo + " valores positivos");
+        System.out.println(deci.format(mediaPos));
+ 
+    }
+ 
+}

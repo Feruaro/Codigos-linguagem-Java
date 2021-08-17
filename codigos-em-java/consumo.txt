@@ -1,0 +1,20 @@
+
+
+import java.text.DecimalFormat;
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        DecimalFormat deci = new DecimalFormat("0.000");
+       
+        int km = ler.nextInt();
+        float l = ler.nextFloat();
+        
+        System.out.println(deci.format(km / l) + " km/l");
+ 
+    }
+ 
+}

@@ -1,0 +1,23 @@
+
+
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        int num = ler.nextInt(), i = 0;
+        
+        while(i < 6){
+            if(num%2 == 1){
+                System.out.println(num);
+                i++;
+            }
+            num++;
+        }
+ 
+    }
+ 
+}

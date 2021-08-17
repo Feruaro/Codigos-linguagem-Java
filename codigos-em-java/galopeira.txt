@@ -1,0 +1,23 @@
+
+
+import java.util.Scanner;
+import java.text.DecimalFormat; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        DecimalFormat deci = new DecimalFormat("0.00");
+        
+        int qntd = ler.nextInt();
+        String galopeira = ler.nextLine();
+        
+        for(int i=0; i<qntd; i++){
+            galopeira = ler.nextLine();
+            int tam = galopeira.length();
+            double total = tam * 0.01;
+            System.out.println(deci.format(total));
+        } 
+    } 
+}

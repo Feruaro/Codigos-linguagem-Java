@@ -1,0 +1,19 @@
+
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        DecimalFormat deci = new DecimalFormat("0.0000");
+        
+        double raio = ler.nextDouble(), n = 3.14159;        
+        
+        System.out.println("A=" + deci.format(n * Math.pow(raio, 2)));
+ 
+    }
+ 
+}

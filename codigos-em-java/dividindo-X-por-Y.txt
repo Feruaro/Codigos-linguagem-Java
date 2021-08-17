@@ -1,0 +1,22 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        int qntd = ler.nextInt(), n1, n2;
+        float num;
+        
+        for(int i=0; i<qntd; i++){
+            n1 = ler.nextInt();
+            n2 = ler.nextInt();
+            num = n2;
+            if(n2 == 0) System.out.println("divisao impossivel");
+            else System.out.println(n1 / num);
+        }
+    } 
+}

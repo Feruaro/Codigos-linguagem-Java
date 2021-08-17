@@ -1,0 +1,58 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        int qntd = ler.nextInt();
+        String sheldon, raj, r = "";
+        
+        for(int i=0; i<qntd; i++){
+            sheldon = ler.next();
+            raj = ler.next();
+            
+            //1. a tesoura corta o papel;
+            if(sheldon.equals("tesoura") && raj.equals("papel")) r = "Bazinga!";
+            else if(sheldon.equals("papel") && raj.equals("tesoura")) r = "Raj trapaceou!";            
+            //2. o papel embrulha a pedra;
+            if(sheldon.equals("papel") && raj.equals("pedra")) r = "Bazinga!";
+            else if(sheldon.equals("pedra") && raj.equals("papel")) r = "Raj trapaceou!";            
+            //3. a pedra esmaga o lagarto;
+            if(sheldon.equals("pedra") && raj.equals("lagarto")) r = "Bazinga!";
+            else if(sheldon.equals("lagarto") && raj.equals("pedra")) r = "Raj trapaceou!";           
+            //4. o lagarto envenena Spock;
+            if(sheldon.equals("lagarto") && raj.equals("Spock")) r = "Bazinga!";
+            else if(sheldon.equals("Spock") && raj.equals("lagarto")) r = "Raj trapaceou!";           
+            //5. Spock destrói a tesoura;
+            if(sheldon.equals("Spock") && raj.equals("tesoura")) r = "Bazinga!";
+            else if(sheldon.equals("tesoura") && raj.equals("Spock")) r = "Raj trapaceou!";            
+            //6. a tesoura decapita o lagarto;
+            if(sheldon.equals("tesoura") && raj.equals("lagarto")) r = "Bazinga!";
+            else if(sheldon.equals("lagarto") && raj.equals("tesoura")) r = "Raj trapaceou!";            
+            //7. o lagarto come o papel;
+            if(sheldon.equals("lagarto") && raj.equals("papel")) r = "Bazinga!";
+            else if(sheldon.equals("papel") && raj.equals("lagarto")) r = "Raj trapaceou!";           
+            //8. o papel contesta Spock;
+            if(sheldon.equals("papel") && raj.equals("Spock")) r = "Bazinga!";
+            else if(sheldon.equals("Spock") && raj.equals("papel")) r = "Raj trapaceou!";           
+            //9. Spock vaporiza a pedra;
+            if(sheldon.equals("Spock") && raj.equals("pedra")) r = "Bazinga!";
+            else if(sheldon.equals("pedra") && raj.equals("Spock")) r = "Raj trapaceou!";           
+            //10. a pedra quebra a tesoura.
+            if(sheldon.equals("pedra") && raj.equals("tesoura")) r = "Bazinga!";
+            else if(sheldon.equals("tesoura") && raj.equals("pedra")) r = "Raj trapaceou!";           
+            //empates
+            if(sheldon.equals("pedra") && raj.equals("pedra")) r = "De novo!";
+            else if(sheldon.equals("papel") && raj.equals("papel")) r = "De novo!";
+            else if(sheldon.equals("tesoura") && raj.equals("tesoura")) r = "De novo!";
+            else if(sheldon.equals("lagarto") && raj.equals("lagarto")) r = "De novo!";
+            else if(sheldon.equals("Spock") && raj.equals("Spock")) r = "De novo!";
+            
+            System.out.println("Caso #" + (i+1) + ": " + r);
+        } 
+    } 
+}

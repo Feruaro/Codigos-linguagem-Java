@@ -1,0 +1,33 @@
+
+
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+       
+        int num[] = new int[5];       
+        int qntdPar = 0, qntdImpar = 0, qntdPos = 0, qntdNeg = 0;
+        
+        for(int i=0; i<5; i++){
+            num[i] = ler.nextInt();
+        }
+        
+        for(int i=0; i<5; i++){
+            if(num[i]%2 == 0) qntdPar++;
+            else qntdImpar++;
+            
+            if(num[i] > 0) qntdPos++;
+            else if(num[i] < 0) qntdNeg++;
+        }
+       
+        System.out.println(qntdPar + " valor(es) par(es)");
+        System.out.println(qntdImpar + " valor(es) impar(es)");
+        System.out.println(qntdPos + " valor(es) positivo(s)");
+        System.out.println(qntdNeg + " valor(es) negativo(s)");
+ 
+    }
+ 
+}

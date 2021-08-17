@@ -1,0 +1,22 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+Scanner ler = new Scanner(System.in);
+        
+        int n = ler.nextInt(), i = 0, num = 0;
+        
+        while(i < n){           
+            num++;                   
+            for(int a=0; a<3; a++){
+                System.out.print(num + " ");
+                num++;
+            }
+            System.out.println("PUM");           
+            i++;
+        } 
+    }
+}

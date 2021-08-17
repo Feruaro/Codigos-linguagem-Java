@@ -1,0 +1,22 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+       
+        int A = ler.nextInt(), B = ler.nextInt(), C = ler.nextInt();
+        
+        int maior = 0;
+        //verifica o maior entre os dois primeiros numeros
+        maior = (A + B + Math.abs(A - B)) / 2;
+        //verifica o maior entre o resultado dos dois primeiros com o ultimo numero
+        maior = (maior + C + Math.abs(maior - C)) / 2;
+        
+        System.out.println(maior + " eh o maior");
+    }
+ 
+}

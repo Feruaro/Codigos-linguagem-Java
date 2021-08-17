@@ -1,0 +1,26 @@
+
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        DecimalFormat deci = new DecimalFormat("0.00");
+        
+        int c1 = ler.nextInt(), n1 = ler.nextInt();
+        double v1 = ler.nextDouble();
+        
+        int c2 = ler.nextInt();
+        int n2 = ler.nextInt();
+        double v2 = ler.nextDouble();
+        
+        double valorPagar = (n1 * v1) + (n2 * v2);
+        
+        System.out.println("VALOR A PAGAR: R$ " + deci.format(valorPagar));
+ 
+    }
+ 
+}

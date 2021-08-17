@@ -1,0 +1,28 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        int x = ler.nextInt(), y = ler.nextInt(), aux = 0, somaImpar = 0;
+        
+        //x -> com o menor valor inteiro
+        if(x > y){
+            aux = x;
+            x = y;
+            y = aux;
+        }
+        
+        for(int i=x+1; i<=y-1; i++){
+            if(i%2 == 1 || -i%2 == 1) somaImpar += i;
+        }
+        
+        System.out.println(somaImpar);
+ 
+    }
+ 
+}

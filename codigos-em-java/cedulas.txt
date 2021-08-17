@@ -1,0 +1,63 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        //considerar ano -> 365 dias / mês -> 30 dias 
+        
+        int valor = ler.nextInt(), aux = valor;
+        int nota100 = 0, nota50 = 0, nota20 = 0, nota10 = 0, nota5 = 0, nota2 = 0, nota1 = 0;
+        
+        //calcula qntd notas de 100
+        while(valor - 100 >= 0){
+            valor -= 100;
+            nota100++;
+        }       
+        //calcula qntd notas de 50
+        while(valor - 50 >= 0){
+            valor -= 50;
+            nota50++;
+        }        
+        //calcula qntd notas de 20
+        while(valor - 20 >= 0){
+            valor -= 20;
+            nota20++;
+        }       
+        //calcula qntd notas de 10
+        while(valor - 10 >= 0){
+            valor -= 10;
+            nota10++;
+        }        
+        //calcula qntd de notas de 5
+        while(valor - 5 >= 0){
+            valor -= 5;
+            nota5++;
+        }        
+        //calcula qntd de notas de 2
+        while(valor - 2 >= 0){
+            valor -= 2;
+            nota2++;
+        }        
+        //calcula qntd de notas de 1
+        while(valor - 1 >= 0){
+            valor -= 1;
+            nota1++;
+        }
+        
+        System.out.println(aux);
+        System.out.println(nota100 + " nota(s) de R$ 100,00");
+        System.out.println(nota50 + " nota(s) de R$ 50,00");
+        System.out.println(nota20 + " nota(s) de R$ 20,00");
+        System.out.println(nota10 + " nota(s) de R$ 10,00");
+        System.out.println(nota5 + " nota(s) de R$ 5,00");
+        System.out.println(nota2 + " nota(s) de R$ 2,00");
+        System.out.println(nota1 + " nota(s) de R$ 1,00");
+ 
+    }
+ 
+}

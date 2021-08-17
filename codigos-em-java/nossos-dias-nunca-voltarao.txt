@@ -1,0 +1,19 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        String frase[] = {"L", "I", "F", "E", " " , "I", "S", " ", "N", "O", "T", " ", "A", " ", "P", "R", "O", "B", "L", "E", "M", " ", "T", "O", " ", "B", "E", " ", "S", "O", "L", "V", "E", "D"};
+        int num = ler.nextInt();
+        
+        for(int i=0; i<num; i++){
+            System.out.print(frase[i]);
+        }
+        System.out.print("\n"); 
+    } 
+}

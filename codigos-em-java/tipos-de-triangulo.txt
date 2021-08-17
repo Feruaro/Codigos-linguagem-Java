@@ -1,0 +1,38 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        double A = ler.nextDouble(), B = ler.nextDouble(), C = ler.nextDouble(), x;
+        
+        if(A < B){
+            x = A;
+            A = B;
+            B = x;
+        }
+        if(A < C){
+            x = A;
+            A = C;
+            C = x;
+        }
+        if(B < C){
+            x = B;
+            B = C;
+            C = x;
+        }
+        
+        if(A >= (B + C)) System.out.println("NAO FORMA TRIANGULO");
+        else if(Math.pow(A, 2) == (Math.pow(B, 2) + Math.pow(C, 2))) System.out.println("TRIANGULO RETANGULO");
+        else if(Math.pow(A, 2) > (Math.pow(B, 2) + Math.pow(C, 2))) System.out.println("TRIANGULO OBTUSANGULO");
+        else if(Math.pow(A, 2) < (Math.pow(B, 2) + Math.pow(C, 2))) System.out.println("TRIANGULO ACUTANGULO");            
+        if(A == B && A == C) System.out.println("TRIANGULO EQUILATERO");
+        else if(A == B || A == C || B == C) System.out.println("TRIANGULO ISOSCELES");
+ 
+    }
+ 
+}

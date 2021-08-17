@@ -1,0 +1,21 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        int senha = 2002, tentativa;
+        
+        do{
+            tentativa = ler.nextInt();
+            if(tentativa == senha) System.out.println("Acesso Permitido");
+            else System.out.println("Senha Invalida");
+        }while(tentativa != senha);
+ 
+    }
+ 
+}

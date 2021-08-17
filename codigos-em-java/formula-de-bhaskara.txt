@@ -1,0 +1,32 @@
+
+
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        DecimalFormat deci = new DecimalFormat("0.00000");
+        
+        double A = ler.nextDouble();
+        double B = ler.nextDouble();
+        double C = ler.nextDouble();
+        double delta = (Math.pow(B, 2)) - (4 * A * C);
+        double r1 = 0, r2 = 0;
+        
+        if(A == 0 || delta < 0) System.out.println("Impossivel calcular");
+        } else {    //calculo de baskara 
+            r1 = (-B + Math.sqrt(delta)) / (2 * A);
+            r2 = (-B - Math.sqrt(delta)) / (2 * A);
+            
+            System.out.println("R1 = " + deci.format(r1));
+            System.out.println("R2 = " + deci.format(r2));
+        }
+            
+        
+ 
+    }
+ 
+}

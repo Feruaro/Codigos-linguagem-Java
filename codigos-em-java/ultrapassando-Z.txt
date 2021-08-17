@@ -1,0 +1,27 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        int x = ler.nextInt(), z, qntd = 1, somaX = 0;
+        
+        do{
+            z = ler.nextInt();
+        }while(z <= x);
+        
+        somaX = x;
+        
+        while(somaX < z){
+            x++;
+            somaX += x;
+            qntd++;
+        }
+        
+        System.out.println(qntd); 
+    }
+}

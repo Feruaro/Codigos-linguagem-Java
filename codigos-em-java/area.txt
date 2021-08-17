@@ -1,0 +1,44 @@
+
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        DecimalFormat deci = new DecimalFormat("0.000");
+        
+        double A = ler.nextDouble(), B = ler.nextDouble(), C = ler.nextDouble();
+        
+        //a) a área do triângulo retângulo que tem A por base e C por altura.
+        //area -> base * alt / 2
+        double areaTriangulo = (A * C) / 2;
+        
+        //b) a área do círculo de raio C. (n -> pi = 3.14159)
+        //area -> n * raio^2
+        double n = 3.14159;
+        double areaCirculo = n * Math.pow(C, 2);
+        
+        //c) a área do trapézio que tem A e B por bases e C por altura.
+        //area -> somar a base maior e base menor, multiplicar pela altura e depois, basta dividir o resultado por dois
+        double areaTrapezio = ((A + B) * C) / 2;
+        
+        //d) a área do quadrado que tem lado B.
+        //area -> l^2
+        double areaQuadrado = Math.pow(B, 2);
+        
+        //e) a área do retângulo que tem lados A e B.
+        //area -> base * alt
+        double areaRetangulo = A * B;
+        
+        System.out.println("TRIANGULO: " + deci.format(areaTriangulo));
+        System.out.println("CIRCULO: " + deci.format(areaCirculo));
+        System.out.println("TRAPEZIO: " + deci.format(areaTrapezio));
+        System.out.println("QUADRADO: " + deci.format(areaQuadrado));
+        System.out.println("RETANGULO: " + deci.format(areaRetangulo));
+ 
+    }
+ 
+}

@@ -1,0 +1,23 @@
+
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        DecimalFormat deci = new DecimalFormat("0.00");
+        
+        int numFuncionario = ler.nextInt(), qntdHora = ler.nextInt();
+        double valorHora = ler.nextDouble();
+        
+        double salario = qntdHora * valorHora;
+        
+        System.out.println("NUMBER = " + numFuncionario);
+        System.out.println("SALARY = U$ " + deci.format(salario));
+ 
+    }
+ 
+}

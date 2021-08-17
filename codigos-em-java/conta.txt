@@ -1,0 +1,29 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        int qntd = ler.nextInt(), s, c, aux;
+        
+        for(int i=0; i<qntd; i++){
+            c = ler.nextInt();
+            s = 1;
+            aux = 1;
+            for(int x=1; x<c; x++){
+                if(aux%2 != 0){
+                    aux++;
+                    s -= 1;
+                } else {
+                    aux++;
+                    s += 1;
+                }
+            }
+            System.out.println(s);
+        }
+    } 
+}

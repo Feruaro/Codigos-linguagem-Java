@@ -1,0 +1,30 @@
+
+
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        DecimalFormat deci = new DecimalFormat("0.00");
+        
+        int qntd = ler.nextInt(), prod, qntdProd;
+        double soma = 0;
+        
+        for(int i=0; i<qntd; i++){
+            do{
+                prod = ler.nextInt();
+            }while(prod < 1001 || prod > 1005);
+            qntdProd = ler.nextInt();
+            
+            if(prod == 1001) soma += (qntdProd * 1.50);
+            else if(prod == 1002) soma += (qntdProd * 2.50);
+            else if(prod == 1003) soma += (qntdProd * 3.50);
+            else if(prod == 1004) soma += (qntdProd * 4.50);
+            else if(prod == 1005) soma += (qntdProd * 5.50);            
+        }        
+        System.out.println(deci.format(soma));
+    }
+}

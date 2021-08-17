@@ -1,0 +1,30 @@
+
+
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        int qntd = ler.nextInt(), x, y, qntdImpar;
+        
+        for(int i=0; i<qntd; i++){           
+            x = ler.nextInt();
+            y = ler.nextInt();
+            qntdImpar = 0;
+            
+            if(x < y){
+                for(int a=x+1; a<y; a++){
+                    if(a%2 == 1) qntdImpar += a;
+                }
+            } else{
+                for(int b=y+1; b<x; b++){
+                    if(b%2 == 1) qntdImpar += b;
+                }
+            }           
+            System.out.println(qntdImpar);            
+        } 
+    } 
+}

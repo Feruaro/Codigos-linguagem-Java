@@ -1,0 +1,22 @@
+
+
+import java.util.Scanner; 
+   
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        int nota = ler.nextInt();
+        char n = ' ';
+        
+        if(nota == 0) n = 'E';
+        else if(nota > 0 && nota <= 35) n = 'D';
+        else if(nota > 35 && nota <= 60) n = 'C';
+        else if(nota > 60 && nota <= 85) n = 'B';
+        else if(nota > 85 && nota <= 100) n = 'A';
+              
+        System.out.println(n); 
+    } 
+}

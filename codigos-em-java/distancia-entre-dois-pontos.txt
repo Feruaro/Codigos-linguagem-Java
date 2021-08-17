@@ -1,0 +1,22 @@
+
+
+import java.text.DecimalFormat;
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        DecimalFormat deci = new DecimalFormat("0.0000");
+       
+        float x1 = ler.nextFloat(), y1 = ler.nextFloat();
+        float x2 = ler.nextFloat(), y2 = ler.nextFloat();
+        
+        double distancia = Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
+        
+        System.out.println(deci.format(distancia));
+ 
+    }
+ 
+}

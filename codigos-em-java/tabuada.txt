@@ -1,0 +1,23 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        int n;
+        
+        do{
+           n = ler.nextInt();
+        }while(n < 2 || n > 1000);
+        
+        for(int i=1; i<=10; i++){
+            System.out.println(i + " x " + n + " = " + i*n);
+        }
+ 
+    }
+ 
+}

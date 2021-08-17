@@ -1,0 +1,27 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        int x = ler.nextInt(), a = 1, b = 1, c = 1, auxB = 0, xC = 3, yC = 2;
+        
+        for(int i=0; i<x; i++){
+            for(int j=0; j<2; j++){
+                System.out.println(a + " " + b + " " + c);
+                b++;
+                c++;
+            }
+            a++;
+            auxB += 2;
+            b += auxB-1;
+            c += (xC * yC) - 1;
+            xC += 3;
+            yC++;            
+        } 
+    } 
+}

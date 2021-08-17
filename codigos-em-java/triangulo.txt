@@ -1,0 +1,21 @@
+
+
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        DecimalFormat deci = new DecimalFormat("0.0");
+        
+        double a = ler.nextDouble(), b = ler.nextDouble(), c = ler.nextDouble();
+        
+        //triangulo -> a soma de dois lados tem que ser maior que o terceiro lado
+        if(a < (b + c) && b < (a + c) && c < (a + b)) System.out.println("Perimetro = " + deci.format(a + b + c));
+        else System.out.println("Area = " + deci.format(((a + b) * c) / 2));
+       
+    }
+ 
+}

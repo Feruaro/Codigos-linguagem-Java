@@ -1,0 +1,23 @@
+
+
+import java.text.DecimalFormat;
+import java.util.Scanner; 
+ 
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        DecimalFormat deci = new DecimalFormat("0.00");
+        
+        String nome = ler.next();
+        double salario = ler.nextDouble(), totalVendas = ler.nextDouble();
+        
+        //vendedor ganha 15% de comissão sobre suas vendas efetuadas, informar o total a receber no final do mês
+        double totalSalario = ((totalVendas * 15) / 100) + salario;
+        
+        System.out.println("TOTAL = R$ " + deci.format(totalSalario));
+ 
+    }
+ 
+}

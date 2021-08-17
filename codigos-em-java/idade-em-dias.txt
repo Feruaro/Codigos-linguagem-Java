@@ -1,0 +1,37 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+	//considerar ano -> 365 dias / mês -> 30 dias        
+
+	Scanner ler = new Scanner(System.in);         
+        
+        int idade = ler.nextInt(), ano = 0, mes = 0, dia = 0;
+        
+        //calcula anos
+        while(idade - 365 >= 0){
+            idade -= 365;
+            ano++;
+        }       
+        //calcula mês
+        while(idade - 30 >= 0){
+            idade -= 30;
+            mes++;
+        }       
+        //calcula dias
+        while(idade > 0){
+            idade -= 1;
+            dia++;
+        }
+        
+        System.out.println(ano + " ano(s)");
+        System.out.println(mes + " mes(es)");
+        System.out.println(dia + " dia(s)");
+ 
+    }
+ 
+}

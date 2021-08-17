@@ -1,0 +1,27 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        int a = ler.nextInt(), b = ler.nextInt();       
+        int menor = 0, maior = 0;
+        
+        if(a < b){
+            menor = a;
+            maior = b;
+        } else {
+            menor = b;
+            maior = a;
+        }
+        
+        if(maior%menor == 0) System.out.println("Sao Multiplos");
+        else System.out.println("Nao sao Multiplos");
+ 
+    }
+ 
+}

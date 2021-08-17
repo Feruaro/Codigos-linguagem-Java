@@ -1,0 +1,41 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+        
+        Scanner ler = new Scanner(System.in);
+        
+        int golG, golI, c, qntdVitG = 0, qntdVitI = 0, empate = 0, total = 0;
+        String vencedor = "";
+        
+        do{
+            golI = ler.nextInt();
+            golG = ler.nextInt();
+
+            if(golG > golI) qntdVitG++;
+            else if(golG == golI) empate++;
+            else qntdVitI++;
+            
+            System.out.println("Novo grenal (1-sim 2-nao)");
+            c = ler.nextInt(); 
+            
+            total++;
+        }while(c == 1);
+        
+        if(qntdVitG > qntdVitI) vencedor = "Gremio venceu mais";
+        else if(qntdVitG == qntdVitI) vencedor = "Nao houve vencedor";
+        else vencedor = "Inter venceu mais";
+        
+        System.out.println(total + " grenais" +
+                           "\nInter:" + qntdVitI + 
+                           "\nGremio:" + qntdVitG +
+                           "\nEmpates:" + empate +
+                            "\n" + vencedor);
+        
+ 
+    }
+ 
+}

@@ -1,0 +1,47 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        int num, ap = 0, ai = 0;
+        int par[] = new int[5], impar[] = new int[5];
+        
+        for(int i=0; i<15; i++){
+            num = ler.nextInt();
+            
+            if(num%2 == 0 || -num%2 == 0){
+                par[ap] = num;
+                ap++;
+                if(ap == 5){
+                    for(int p=0; p<5; p++){
+                        System.out.println("par[" + p + "] = " + par[p]);
+                        par[p] = 0;
+                    }
+                    ap = 0;
+                }
+            } else if(num%2 == 1 || -num%2 == 1){
+                impar[ai] = num;
+                ai++;
+                if(ai == 5){
+                    for(int ip=0; ip<5; ip++){
+                        System.out.println("impar[" + ip + "] = " + impar[ip]);
+                        impar[ip] = 0;
+                    }
+                    ai = 0;
+                }
+            }
+        }  
+        
+        for(int ip=0; ip<5; ip++){
+            if(impar[ip] != 0) System.out.println("impar[" + ip + "] = " + impar[ip]);            
+        }
+        for(int p=0; p<5; p++){
+            if(par[p] != 0) System.out.println("par[" + p + "] = " + par[p]);
+        } 
+    } 
+}

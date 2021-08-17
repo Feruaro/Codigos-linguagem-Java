@@ -1,0 +1,23 @@
+
+
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        DecimalFormat deci = new DecimalFormat("0.0");
+        
+        double A = ler.nextDouble();
+        double B = ler.nextDouble();
+        double C = ler.nextDouble();      
+        
+        double media = (A * 0.2) + (B * 0.3) + (C * 0.5);
+
+        System.out.println("MEDIA = " + deci.format(media));
+ 
+    }
+ 
+}

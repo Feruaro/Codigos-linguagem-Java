@@ -1,0 +1,28 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        int p = ler.nextInt(), j1 = ler.nextInt(), j2 = ler.nextInt();
+        int r = ler.nextInt(), a = ler.nextInt(), g = 0, soma = j1 + j2;
+        
+        if(r == 1 && a == 1) g = 2;
+        else if((r == 1 && a == 0) || (r == 0 && a == 1)) g = 1;
+        else if(r == 0 && a == 0){
+            if(soma%2 == 0){
+                if(p == 1) g = 1; 
+                else if(p == 0) g = 2;
+            } else if(soma%2 == 1){
+                if(p == 1) g = 2;
+                else if(p == 0) g = 1;
+            }
+        } 
+       
+        System.out.println("Jogador " + g + " ganha!"); 
+    } 
+}

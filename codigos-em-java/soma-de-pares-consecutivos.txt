@@ -1,0 +1,31 @@
+
+
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        int x, i, soma;
+        
+        do {
+            i = 0;
+            soma = 0;
+            
+            x = ler.nextInt();
+            
+            if(x != 0){
+                while(i < 5){
+                    if(x%2 == 0){
+                       soma += x;
+                       i++;
+                    }
+                    x++;
+                }
+                System.out.println(soma);
+            }
+        }while(x != 0);
+    }
+}

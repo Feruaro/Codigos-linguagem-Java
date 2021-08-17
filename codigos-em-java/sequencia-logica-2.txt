@@ -1,0 +1,23 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        int x = ler.nextInt(), y = ler.nextInt(), aux = 0;
+        
+        for(int i=1; i<=y; i++){
+            if(aux < x-1){
+                System.out.print(i + " ");
+                aux++;
+            } else{
+                System.out.println(i);
+                aux = 0;
+            }               
+        } 
+    } 
+}
