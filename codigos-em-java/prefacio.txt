@@ -1,0 +1,29 @@
+
+
+import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        int a = ler.nextInt(), b = ler.nextInt();
+        int c = 0, d = 0, q, r;
+        
+        if(a < 0){
+            c = b;
+            if(b < 0) c = b * -1;
+            for(r=0; r<c; r++){
+                d = a - r;
+                if(d%b == 0) break;
+            }
+            q = d / b;
+        } else{
+            q = a / b;
+            r = a % b;
+        }
+        
+        System.out.println(q + " " + r); 
+    }
+}

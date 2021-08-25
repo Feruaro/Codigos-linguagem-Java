@@ -1,0 +1,20 @@
+
+
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        DecimalFormat deci = new DecimalFormat("0.00");
+        
+        double a = ler.nextDouble(), b = ler.nextDouble();
+        double x = ((b-a) * 100) / a;
+        
+        System.out.println(deci.format(x) + "%");
+ 
+    }
+ 
+}

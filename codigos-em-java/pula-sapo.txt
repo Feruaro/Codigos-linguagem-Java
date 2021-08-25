@@ -1,0 +1,32 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        int p = ler.nextInt(), n = ler.nextInt(), dif = 0, aux = 0;
+        int canos[] = new int[n];
+        
+        for(int x=0; x<n; x++){
+            canos[x] = ler.nextInt();
+        }
+        for(int i=1; i<n; i++){
+            if(canos[i] > canos[i-1]) dif = canos[i] - canos[i-1];
+            else dif = canos[i-1] - canos[i];
+            
+            if(dif > p){
+                aux = 1;
+                break;
+            }
+        }
+        
+        if(aux == 1) System.out.println("GAME OVER");
+        else System.out.println("YOU WIN");
+ 
+    }
+ 
+}
