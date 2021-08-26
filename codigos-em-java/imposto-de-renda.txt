@@ -1,0 +1,30 @@
+
+
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        DecimalFormat deci = new DecimalFormat("0.00");
+        
+        double valor = ler.nextDouble(), dif = 0;
+        
+        if(valor > 4500.00){
+            dif += (valor - 4500.00) * 0.28;
+            valor = 4500.00;
+        }
+        if(valor > 3000.00 && valor <= 4500.00){
+            dif += (valor - 3000.00) * 0.18;
+            valor = 3000.00;
+        }
+        if(valor > 2000.00 && valor <= 3000.00) dif += (valor - 2000.00) * 0.08;
+      
+        if(valor >= 0 && valor <= 2000.00) System.out.println("Isento");
+        else System.out.println("R$ " + deci.format(dif));
+ 
+    }
+ 
+}

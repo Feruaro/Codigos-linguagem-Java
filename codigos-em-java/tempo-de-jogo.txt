@@ -1,0 +1,21 @@
+
+
+import java.util.Scanner; 
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        
+        int h1 = ler.nextInt(), h2 = ler.nextInt(), aux = 24;
+        
+        if(h1 >= h2){
+            for(int i=0; i<h2; i++){
+                aux++;
+            }
+            h2 = aux;
+        }
+        System.out.println("O JOGO DUROU " + (h2 - h1) + " HORA(S)"); 
+    }
+}

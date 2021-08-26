@@ -1,0 +1,41 @@
+
+
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main {
+ 
+    public static void main(String[] args) {
+ 
+        Scanner ler = new Scanner(System.in);
+        DecimalFormat deci = new DecimalFormat("0.00");
+        
+        int qntd = ler.nextInt(), qntdAnimal, qntdC = 0, qntdR = 0, qntdS = 0, qntdTotal = 0;
+        String animal;
+        
+        for(int i=0; i<qntd; i++){
+            qntdAnimal = ler.nextInt();
+            animal = ler.next();
+            
+            if(animal.equals("C")){
+                qntdC += qntdAnimal;
+                qntdTotal += qntdAnimal;
+            } else if(animal.equals("R")){
+                qntdR += qntdAnimal;
+                qntdTotal += qntdAnimal;
+            } else if(animal.equals("S")){
+                qntdS += qntdAnimal;
+                qntdTotal += qntdAnimal;
+            }
+        }
+        
+        System.out.println("Total: " + qntdTotal + " cobaias" +
+                           "\nTotal de coelhos: " + qntdC +
+                           "\nTotal de ratos: " + qntdR +
+                           "\nTotal de sapos: " + qntdS +
+                           "\nPercentual de coelhos: " + deci.format((qntdC * 100.00f) / qntdTotal) + " %" +
+                           "\nPercentual de ratos: " + deci.format((qntdR * 100.00f) / qntdTotal) + " %" +
+                           "\nPercentual de sapos: " + deci.format((qntdS * 100.00f) / qntdTotal) + " %");
+                           
+    }
+}
